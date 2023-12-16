@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "finalf";
+  src: url("finalf.ttf") format("truetype");
+}
+
+.hero-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-name {
+  font-family: "finalf", sans-serif;
+  color: rgb(209, 214, 119);
+  font-size: 2em;
+  border-left: 0.2em solid;
+  border-right: 0.2em solid;
+  width: 350px;
+  text-align: center;
+  margin: 10px;
+}
+.server-name {
+  margin: 10px;
+  font-size: 2.3em;
+  color: whitesmoke;
+}
+
+.title {
+  margin: 20px;
+  font-size: 5.4em;
+  font-weight: bold;
+  color: whitesmoke;
+  text-shadow: 10px 10px 4px gray;
+}
+
+.sub-title {
+  color: rgb(165, 165, 222);
+  font-size: 1.8em;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px;
+}

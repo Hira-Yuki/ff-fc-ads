@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
+.container {
+  margin: 0 auto;
+  width: 780px;
+  padding: 40px;
+  background-image: url('../public/milky-way-5713294_1280.jpg');
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App.css */
+
+body {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.snowflake {
+  top: 0;
+
+  position: absolute;
+  background: #fff;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: falling linear infinite;
+  animation-duration: 5s; /* 애니메이션 속도를 원하는 값으로 조정하세요 */
+}
+
+@keyframes falling {
+  0% {
+    transform: translateY(-10vh);
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(110vh);
   }
 }
