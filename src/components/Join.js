@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Join = () => {
   const onClickHandler = () => {
-    window.open('https://open.kakao.com/o/sbJmXtXf', '_newtab');
+    window.open("https://open.kakao.com/o/sbJmXtXf", "_newtab");
   };
   return (
     <StContainer>
