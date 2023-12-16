@@ -18,6 +18,8 @@ export default Introduce;
 const StBenefitBox = styled.div`
   margin-top: 10px;
 
+  padding: 40px;
+
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -33,11 +35,12 @@ const StBenefit = styled.div`
   text-align: center;
   height: 200px;
   flex-basis: 22.332%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   box-shadow: 1px 1px 1px 1px black;
 
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  text-shadow: 2px 2px 3px black;
 `;

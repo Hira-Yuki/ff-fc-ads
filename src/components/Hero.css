@@ -35,9 +35,11 @@
 }
 
 .sub-title {
-  color: rgb(165, 165, 222);
+  color: rgb(182, 142, 142);
   font-size: 1.8em;
   font-weight: bold;
   font-style: italic;
   margin: 10px;
+
+  text-shadow: 2px 2px 2px black;
 }
