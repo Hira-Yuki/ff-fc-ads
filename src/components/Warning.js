@@ -3,7 +3,9 @@ import styled from "styled-components";
 const Warning = () => {
   return (
     <StMainBox>
-      <h3 style={{ fontSize: "2em", margin: "25px", fontWeight:"bold"}}>WARNING!</h3>
+      <h3 style={{ fontSize: "2em", margin: "25px", fontWeight: "bold" }}>
+        WARNING!
+      </h3>
       <p>남들과 다른 독특한 사상을 가지신 분이나</p>
       <p>사사게 유명인은 받지 않습니다.</p>
     </StMainBox>
@@ -24,4 +26,7 @@ const StMainBox = styled.div`
   align-items: center;
 
   font-size: 2em;
+
+  background-color: transparent;
+  box-shadow: 4px 4px 4px 2px whitesmoke;
 `;

@@ -31,4 +31,5 @@ const StBtn = styled.button`
   border: 0;
 
   font-size: 1.5em;
+  box-shadow: 2px 2px 2px 3px whitesmoke;
 `;

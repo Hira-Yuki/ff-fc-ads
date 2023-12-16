@@ -36,7 +36,7 @@ const StBenefit = styled.div`
   height: 200px;
   flex-basis: 22.332%;
   background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 1px 1px 1px 1px black;
+  box-shadow: 4px 4px 4px 2px whitesmoke;
 
   display: flex;
   justify-content: center;
