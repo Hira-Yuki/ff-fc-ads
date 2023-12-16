@@ -1,12 +1,12 @@
 .container {
   margin: 0 auto;
-  width: 780px;
-  padding: 40px;
+  max-width: 780px;
+  padding: 20px;
   background-image: url('../public/milky-way-5713294_1280.jpg');
   background-size: cover;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* App.css */
