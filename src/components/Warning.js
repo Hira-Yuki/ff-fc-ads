@@ -13,12 +13,12 @@ const Warning = () => {
 export default Warning;
 
 const StMainBox = styled.div`
-  margin-top: 30px;
+  margin: 30px auto;
   padding: 20px;
   border: 3px solid white;
   border-radius: 20px;
   color: white;
-
+  width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
