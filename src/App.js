@@ -9,46 +9,55 @@ function App() {
   const [snowflakes, setSnowflakes] = useState([]);
 
   useEffect(() => {
-    // 눈송이를 생성하는 함수
+    const maxSnowflakes = 50; // 최대 눈송이 개수 제한
+
     const createSnowflake = () => {
+      if (snowflakes.length >= maxSnowflakes) {
+        return; // 눈송이 개수 제한 초과 시 종료
+      }
+
       const snowflake = document.createElement("div");
       snowflake.className = "snowflake";
-      snowflake.style.left = `${Math.random() * 100}vw`;
+
+      // container의 영역 내에서 랜덤한 위치 지정
+      snowflake.style.left = `${Math.random() * 100}%`;
+
+      // 추가: 생성 시간을 기록
+      snowflake.creationTime = new Date().getTime();
+
       document.body.appendChild(snowflake);
 
-      // 눈송이를 상태에 추가
-      setSnowflakes((prevSnowflakes) => [...prevSnowflakes, snowflake]);
-
-      // 눈송이가 뷰포트를 벗어나면 제거
-      snowflake.addEventListener("animationend", () => {
+      // 이벤트 리스너를 외부 함수로 따로 빼기
+      const handleAnimationEnd = () => {
         snowflake.remove();
-        // 눈송이를 상태에서 제거
+        snowflake.removeEventListener("animationend", handleAnimationEnd);
+
+        // 상태 업데이트 수정
         setSnowflakes((prevSnowflakes) =>
           prevSnowflakes.filter((fl) => fl !== snowflake)
         );
-      });
+      };
+
+      snowflake.addEventListener("animationend", handleAnimationEnd);
+      // 상태 업데이트 수정: 눈송이 추가
+      setSnowflakes((prevSnowflakes) => [...prevSnowflakes, snowflake]);
     };
 
-    // 일정 간격으로 눈송이 생성
     const snowfallInterval = setInterval(createSnowflake, 500);
-
-    // 일정 시간이 지난 눈송이 제거
     const cleanupInterval = setInterval(() => {
       setSnowflakes((prevSnowflakes) => {
         const currentTime = new Date().getTime();
         return prevSnowflakes.filter(
-          (fl) =>
-            currentTime - fl.creationTime < 10000 // 10초 이상 경과한 눈송이 제거
+          (fl) => currentTime - fl.creationTime < 10000
         );
       });
     }, 1000);
 
-    // 컴포넌트가 언마운트되면 간격 제거
     return () => {
       clearInterval(snowfallInterval);
       clearInterval(cleanupInterval);
     };
-  }, []); // 빈 의존성 배열로 효과를 한 번만 실행
+  }, [snowflakes]);
 
   return (
     <div className="container">
