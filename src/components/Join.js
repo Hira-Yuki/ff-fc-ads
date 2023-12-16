@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Join = () => {
-    const onClickHandler = ()=> {
-     alert("아직 링크 없지롱!")
-    }
+  const onClickHandler = () => {
+    window.open('https://open.kakao.com/o/sbJmXtXf', '_newtab');
+  };
   return (
     <StContainer>
-      <StBtn onClick={onClickHandler}>지금 당장 가입하러 가기</StBtn>
+      <StBtn onClick={onClickHandler}>지금 당장 가입 신청하러 가기</StBtn>
     </StContainer>
   );
 };
