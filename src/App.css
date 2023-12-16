@@ -3,6 +3,7 @@
   max-width: 780px;
   padding: 20px;
   background-image: url('../public/milky-way-5713294_1280.jpg');
+  background-color: rgb(23, 23, 23);
   background-size: cover;
   position: relative;
   overflow: hidden;
